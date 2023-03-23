@@ -6,8 +6,11 @@ const UseStateArray = () => {
 
   const removeItem = (id) => {
     console.log(id);
+    // const newPeople = people.filter((person) => person.id !== id);
+    // setPeople(newPeople);
+    // Can also pass const newPeople in setPeople like below:
     const newPeople = people.filter((person) => person.id !== id);
-    setPeople(newPeople);
+    setPeople(people.filter((person) => person.id !== id));
   };
 
   // setPeople to an empty array can clear all items
