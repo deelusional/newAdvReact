@@ -1,20 +1,40 @@
 import { useState } from 'react';
 
 const UseStateObject = () => {
-  const [name, setName] = useState('Dickhead')
-  const [age, setAge] = useState(50)
-  const [hobby, setHobby] = useState('Reading Comics')
+  const [person, setPerson] = useState({
+    name: 'dickhead',
+    age: 40,
+    hobby: 'Coding Web Applications',
+  });
+  
+  // Refactor the code below to save lines of code and look cleaner (above)
+  // const [name, setName] = useState('Dickhead')
+  // const [age, setAge] = useState(50)
+  // const [hobby, setHobby] = useState('Reading Comics')
   
   const displayPerson = () => { 
-    setName('john')
-    setAge(60);
-    setHobby('Scream at bad kids!');
+    setPerson({
+      name: 'asshat',
+      age: 50,
+      hobby: 'Being a complete wanker!'
+    })
+
+    // Below was used before the refactored code
+    // setName('john')
+    // setAge(60);
+    // setHobby('Scream at bad kids!');
   }
   // Use an empty fragment <></>
   return <>
-    <h3>{name}</h3>
-    <h3>{age}</h3>
-    <h3>Likes to: {hobby}</h3>
+    {/* Refactored code */}
+    <h3>{person.name}</h3>
+    <h3>{person.age}</h3>
+    <h3>Likes: {person.hobby}</h3>
+
+    {/* Three lines of code below were from before refactoring */}
+    {/* <h3>{name}</h3> */}
+    {/* <h3>{age}</h3> */}
+    {/* <h3>Likes to : {hobby}</h3> */}
     <button className='btn' onClick={displayPerson}>
       show asshat
     </button>
