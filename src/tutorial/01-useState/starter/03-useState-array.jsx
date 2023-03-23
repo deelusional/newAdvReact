@@ -29,6 +29,8 @@ const UseStateArray = () => {
         type='button'
         style={{ marginTop: '2rem' }}
         className='btn'
+        // Can also use an arrrow func in onClick
+        // onClick={()=>setPeople([])}
         onClick={clearAllItems}
       >
         clear items
