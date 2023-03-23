@@ -4,8 +4,10 @@ import { data } from '../../../data';
 const UseStateArray = () => {
   const [people, setPeople] = React.useState(data);
 
-  const removeItem = () => {
-
+  const removeItem = (id) => {
+    console.log(id);
+    const newPeople = people.filter((person) => person.id !== id);
+    setPeople(newPeople);
   };
 
   // setPeople to an empty array can clear all items
@@ -21,7 +23,9 @@ const UseStateArray = () => {
         const {id, name} = person;
         return <div key={id}>
           <h4>{name}</h4>
-          <button type='button'>Clear</button>
+          <button type='button' onClick={() => removeItem(id)}>
+            Clear
+          </button>
         </div>
       })}
       {/* This button outside of the original curly braces */}
