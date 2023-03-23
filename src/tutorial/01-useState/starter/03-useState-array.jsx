@@ -8,7 +8,7 @@ const UseStateArray = () => {
     console.log(id);
     // const newPeople = people.filter((person) => person.id !== id);
     // setPeople(newPeople);
-    // Can also pass const newPeople in setPeople like below:
+    // Can also pass const newPeople in setPeople like below to make it dynamic:
     const newPeople = people.filter((person) => person.id !== id);
     setPeople(people.filter((person) => person.id !== id));
   };
