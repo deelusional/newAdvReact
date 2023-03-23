@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 const UseStateObject = () => {
   const [person, setPerson] = useState({
-    name: 'dickhead',
-    age: 40,
-    hobby: 'Coding Web Applications',
+    name: 'Pete',
+    age: 36,
+    hobby: 'Losing his bank book',
   });
   
   // Refactor the code below to save lines of code and look cleaner (above)
@@ -13,11 +13,11 @@ const UseStateObject = () => {
   // const [hobby, setHobby] = useState('Reading Comics')
   
   const displayPerson = () => { 
-    setPerson({
-      name: 'asshat',
-      age: 50,
-      hobby: 'Being a complete wanker!'
-    })
+    // setPerson({ name: 'asshat', age: 50, hobby: 'Being a complete wanker!' })
+    // setPerson('Pete the Weenie');
+    // setPerson({name: 'Weenie'});
+    setPerson({...person, name: 'Scaredy Cat', age: 36, hobby: 'Asking his wife where the bank book is'});
+
 
     // Below was used before the refactored code
     // setName('john')
